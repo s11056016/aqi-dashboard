@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f172a, #111827);
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+h1 {
+    color: #38bdf8;
+    margin-bottom: 24px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card {
+    background: rgba(30, 41, 59, 0.92);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+select,
+button {
+    height: 56px;
+    border-radius: 14px;
+    border: none;
+    font-size: 18px;
+}
+
+select {
+    padding: 0 16px;
+    background: #1e293b;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+#loadBtn {
+    background: #10b981;
+}
+
+#monitorBtn {
+    background: #06b6d4;
+}
+
+#stopBtn {
+    background: #64748b;
+}
+
+button:hover {
+    opacity: 0.92;
+}
+
+.result-box {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.aqi-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.aqi-value {
+    font-size: 88px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.status-text {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.chart-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.chart-buttons button {
+    padding: 0 18px;
+    height: 48px;
+    background: #334155;
+}
+
+.chart-buttons .danger {
+    background: #ef4444;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 10px;
+    background: #7f1d1d;
+    color: #fecaca;
+    white-space: pre-wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+.good {
+    color: #22c55e;
+}
+
+.normal {
+    color: #facc15;
+}
+
+.bad {
+    color: #f97316;
+}
+
+.very-bad {
+    color: #ef4444;
+}
+
+canvas {
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+@media (max-width: 900px) {
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .aqi-value {
+        font-size: 64px;
+    }
+}

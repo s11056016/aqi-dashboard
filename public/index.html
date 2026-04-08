@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI 即時監控系統</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AQI 即時監控系統</h1>
+
+        <div class="card">
+            <label for="stationSelect" class="label">選擇監測站</label>
+
+            <div class="controls">
+                <select id="stationSelect">
+                    <option value="">請先載入資料</option>
+                </select>
+
+                <button id="loadBtn">查詢 AQI</button>
+                <button id="monitorBtn">開始監控</button>
+                <button id="stopBtn">停止監控</button>
+            </div>
+
+            <div class="result-box">
+                <div class="aqi-title">目前 AQI 指數</div>
+                <div id="aqiValue" class="aqi-value">--</div>
+                <div id="statusText" class="status-text">尚未查詢</div>
+            </div>
+
+            <div id="errorBox" class="error hidden"></div>
+        </div>
+
+        <div class="card">
+            <div class="chart-header">
+                <h2>歷史數據圖表</h2>
+                <div class="chart-buttons">
+                    <button id="exportBtn">匯出 CSV</button>
+                    <button id="downloadBtn">下載圖表</button>
+                    <button id="clearBtn" class="danger">清除資料</button>
+                </div>
+            </div>
+
+            <canvas id="aqiChart"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
